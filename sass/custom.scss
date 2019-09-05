@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
+$font-type: sans-serif;
+$default-color: rgb(255, 60, 70);
+$default-color-darker: shade($default-color,10%);
+
+.header-container {
+  background: $default-color;
+  color: #fff;
+}
+
+.main-container {
+  background: $default-color-darker;
+  color: #fff;
+}
+
+.testing {
+  width: percentage(5/7);
+  text-indent: 15px;
+}
+
+.source {
+  display: flex;
+}
+
+.example {
+  display: grid;
+  transition: all .5s;
+  user-select: none;
+  background: linear-gradient(to bottom, white, black);
+  color: red;
+}
+
+.some-class {
+  background: #222222;
+}
+
+.new-class {
+  display: block;
+  position: relative;
+  font-size: 15px;
+  line-break: normal;
+  line-height: 19px;
+  float: left;
+  clear: both;
+}
+
+.again-class {
+  color: rebeccapurple;
+  direction: rtl;
+  position: relative;
+  display: block;
+  background: rosybrown;
+}
+
+.flexbox-class {
+  display: flex;
+  background: #b3d4fc;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  left: 24px;
+}
+
+.foo {
+  width: (100% / 3);
+  height: (50% / 2);
+}
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+
+  [dir=rtl] & {
+    #{$property}: $rtl-value;
+  }
+}
+
+.main-container--direction {
+  @include rtl(float, left, right);
+}
+
+button {
+  display: inline-block;
+  background: rgba(113, 117, 122, 0.2);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.button {
+  @extend button;
+  background: orange;
+  border-radius: 10px;
+}

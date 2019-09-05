@@ -1,0 +1,67 @@
+.header-container {
+  background: #ff3c46;
+  color: #fff; }
+
+.main-container {
+  background: #e6363f;
+  color: #fff; }
+
+.testing {
+  width: 71.42857%;
+  text-indent: 15px; }
+
+.source {
+  display: flex; }
+
+.example {
+  display: grid;
+  transition: all .5s;
+  user-select: none;
+  background: linear-gradient(to bottom, white, black);
+  color: red; }
+
+.some-class {
+  background: #222222; }
+
+.new-class {
+  display: block;
+  position: relative;
+  font-size: 15px;
+  line-break: normal;
+  line-height: 19px;
+  float: left;
+  clear: both; }
+
+.again-class {
+  color: rebeccapurple;
+  direction: rtl;
+  position: relative;
+  display: block;
+  background: rosybrown; }
+
+.flexbox-class {
+  display: flex;
+  background: #b3d4fc;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  left: 24px; }
+
+.foo {
+  width: 33.33333%;
+  height: 25%; }
+
+.main-container--direction {
+  float: left; }
+  [dir=rtl] .main-container--direction {
+    float: right; }
+
+button, .button {
+  display: inline-block;
+  background: rgba(113, 117, 122, 0.2);
+  color: #fff;
+  border-radius: 5px; }
+
+.button {
+  background: orange;
+  border-radius: 10px; }
